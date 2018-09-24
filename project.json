@@ -1,0 +1,21 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "contentious-contact"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2017/sports/pac-12-power"
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "",
+  "slug": "",
+  "tags": [],
+  "image": "assets/social.jpg",
+  "sheets": ["1meXJml6LaEqPunj-B1tOufIPjvMrGRjDjpS5H-EgiDA"],
+  "production": true,
+  "embedded": true
+}

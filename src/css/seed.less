@@ -1,0 +1,93 @@
+@import "seattletimes";
+
+.interactive {
+  font-family: @df-sans;
+  font-size: 15px;
+  max-width: 630px;
+  margin: auto;
+}
+
+h1 {
+  margin: 0;
+}
+
+.byline {
+  padding-bottom: 16px;
+}
+
+nav {
+  padding: 8px 0;
+}
+
+nav .weeks {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    cursor: pointer;
+    padding: 4px 8px;
+
+    &.selected {
+      background: @df-blue;
+      color: @df-off-white;
+    }
+  }
+}
+
+.power-table.transition {
+  .row {
+    transition: all .5s ease-in-out;
+  }
+}
+
+.row {
+  .display-flex();
+  .align-items(center);
+  .justify-content(flex-start);
+  border-top: 1px solid @df-light-gray;
+
+  &[data-team="Mariners"] {
+    border-left: 4px solid @st-dark-blue;
+  }
+}
+
+.rank {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px;
+  .flex(0 0 60px);
+
+  .header & {
+    font-size: inherit;
+    font-weight: normal;
+  }
+}
+
+.logo {
+  .flex(0 0 60px);
+  
+  img {
+    max-height: 48px;
+  }
+}
+
+.description {
+  .flex(1 1 80%);
+  padding: 4px 16px;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.previous {
+  padding: 8px;
+  text-align: center;
+  .flex(1 0 40px);
+}

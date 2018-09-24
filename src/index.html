@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_head.html") %>
+  </head>
+  <body>
+
+    <responsive-child>
+      <main class="interactive">
+        <h1>Seattle Times Pac-12 Power Rankings</h1>
+        <div class="byline">By Percy Allen</div>
+
+        <nav>
+          Week:
+          <ul class="weeks"></ul>
+        </nav>
+
+        <div class="power-table">
+          <div class="header row">
+            <div class="rank">Rank</div>
+            <div class="logo"></div>
+            <div class="description">Team</div>
+            <div class="previous">Previous</div>
+          </div>
+          <% json.Pac12PowerRankings2017_rankings.filter(function(r) { return r.week == 1 }).forEach(function(row) { %>
+          <div class="row" data-team="<%= row.team %>">
+            <div class="rank"><%= row.ranking %></div>
+            <div class="logo">
+              <img src="./assets/logos/<%= json.Pac12PowerRankings2017_logos[row.team.toLowerCase()].url %>">
+            </div>
+            <div class="description">
+              <h2><%= row.team %></h2>
+              <div class="blurb">
+                <%= row.blurb %>
+              </div>
+            </div>
+            <div class="previous"> - </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </responsive-child>
+
+    <script>
+window.rankings = <%= JSON.stringify(json.Pac12PowerRankings2017_rankings) %>;
+    </script>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

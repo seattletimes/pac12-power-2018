@@ -6,16 +6,16 @@
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": "2017/sports/pac-12-power"
+      "path": "2018/sports/pac-12-power-rankings"
     }
   },
-  "title": "",
-  "description": "",
-  "url": "",
-  "slug": "",
+  "title": "Pac-12 Hotline's 2018 Power Rankings",
+  "description": "Jon Wilner ranks the Pac-12 each week.",
+  "url": "2018/sports/pac-12-power-rankings",
+  "slug": "pac-12-power-rankings",
   "tags": [],
   "image": "assets/social.jpg",
-  "sheets": ["1meXJml6LaEqPunj-B1tOufIPjvMrGRjDjpS5H-EgiDA"],
+  "sheets": ["1r9chM6jpj4WIRisPKjeYl2qyBetB2fwRMgqVd7V8hiY"],
   "production": true,
   "embedded": true
 }

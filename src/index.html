@@ -11,8 +11,8 @@
 
     <responsive-child>
       <main class="interactive">
-        <h1>Seattle Times Pac-12 Power Rankings</h1>
-        <div class="byline">By Percy Allen</div>
+        <h1>Pac-12 Hotline Power Rankings</h1>
+        <div class="byline">By Jon Wilner</div>
 
         <nav>
           Week:
@@ -26,11 +26,11 @@
             <div class="description">Team</div>
             <div class="previous">Previous</div>
           </div>
-          <% json.Pac12PowerRankings2017_rankings.filter(function(r) { return r.week == 1 }).forEach(function(row) { %>
+          <% json.Pac12PowerRankings2018_rankings.filter(function(r) { return r.week == 1 }).forEach(function(row) { %>
           <div class="row" data-team="<%= row.team %>">
             <div class="rank"><%= row.ranking %></div>
             <div class="logo">
-              <img src="./assets/logos/<%= json.Pac12PowerRankings2017_logos[row.team.toLowerCase()].url %>">
+              <img src="./assets/logos/<%= json.Pac12PowerRankings2018_logos[row.team.toLowerCase()].url %>">
             </div>
             <div class="description">
               <h2><%= row.team %></h2>
@@ -46,7 +46,7 @@
     </responsive-child>
 
     <script>
-window.rankings = <%= JSON.stringify(json.Pac12PowerRankings2017_rankings) %>;
+window.rankings = <%= JSON.stringify(json.Pac12PowerRankings2018_rankings) %>;
     </script>
 
     <script src="app.js" async></script>
